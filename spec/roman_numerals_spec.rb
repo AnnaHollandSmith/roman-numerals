@@ -8,7 +8,11 @@ describe RomanNumerals do
     end
 
     it "should convert 5 into V" do
-      expect(RomanNumerals.convert(5)). to eq("V")
+      expect(RomanNumerals.convert(5)).to eq("V")
+    end
+
+    it "should convert 10 into X" do
+      expect(RomanNumerals.convert(10)).to eq("X") 
     end
   end
 end

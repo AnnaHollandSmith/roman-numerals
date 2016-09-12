@@ -1,8 +1,9 @@
 class RomanNumerals
 
+  ROMAN_NUMERALS = { 1 => "I", 5 => "V", 10 => "X" }
+
   def self.convert(n)
-    return "V" if n == 5
-    "I"
+    ROMAN_NUMERALS[n]
   end
 
 end
