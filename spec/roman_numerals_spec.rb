@@ -57,8 +57,17 @@ describe RomanNumerals do
   end
 
   context "it uses subtractive notation to convert numbers to roman numerals" do
+
     it "should convert 996 into CMXCVI" do
       expect(RomanNumerals.convert(996)).to eq("CMXCVI")
+    end
+
+    it "should convert 449 into CDXLIX" do
+      expect(RomanNumerals.convert(449)).to eq("CDXLIX")
+    end
+
+    it "should convert 99 into XCIX" do
+      expect(RomanNumerals.convert(99)).to eq("XCIX")
     end
 
   end
