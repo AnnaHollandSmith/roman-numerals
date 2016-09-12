@@ -54,6 +54,12 @@ describe RomanNumerals do
     it "should convert 3000 into MMM" do
       expect(RomanNumerals.convert(3000)).to eq("MMM")
     end
+  end
+
+  context "it uses subtractive notation to convert numbers to roman numerals" do
+    it "should convert 996 into CMXCVI" do
+      expect(RomanNumerals.convert(996)).to eq("CMXCVI")
+    end
 
   end
 end
