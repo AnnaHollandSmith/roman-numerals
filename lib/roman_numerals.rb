@@ -21,8 +21,8 @@ class RomanNumerals
       raise "Value must be an integer in the range 0 - 3,999."
     end
     roman_numeral = ""
-    ROMAN_NUMERALS.each do |arabic, roman|
-      (n / arabic).times { roman_numeral << roman; n -= arabic }
+    ROMAN_NUMERALS.each do |k, v|
+      (n / k).times { roman_numeral << v; n -= k }
     end
     roman_numeral
   end
