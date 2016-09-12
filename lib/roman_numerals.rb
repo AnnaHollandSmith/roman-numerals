@@ -17,13 +17,13 @@ class RomanNumerals
                 }
 
   def self.convert(n)
-      if n <= 0 || n > 3999
-        raise "Value must be in the range 0 - 3,999."
-      end
-      roman_numeral = ""
-      ROMAN_NUMERALS.each do |key, value|
-        (n / key).times { roman_numeral << value; n -= key }
-      end
-      roman_numeral
+    if n <= 0 || n >= 3999
+      raise "Value must be an integer in the range 0 - 3,999."
     end
+    roman_numeral = ""
+    ROMAN_NUMERALS.each do |arabic, roman|
+      (n / arabic).times { roman_numeral << roman; n -= arabic }
+    end
+    roman_numeral
   end
+end
