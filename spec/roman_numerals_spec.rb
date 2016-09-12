@@ -69,6 +69,15 @@ describe RomanNumerals do
     it "should convert 99 into XCIX" do
       expect(RomanNumerals.convert(99)).to eq("XCIX")
     end
+  end
 
+  context "when the input is invalid" do
+    it "should raise an error when given an integer that is not positive" do
+      expect{ RomanNumerals.convert(0) }.to raise_error("Value must be in the range 0 - 3,999.")
+    end
+
+    it "should raise an error when given an integer greater than 3999" do
+      expect{ RomanNumerals.convert(6000) }.to raise_error("Value must be in the range 0 - 3,999.")
+    end
   end
 end
