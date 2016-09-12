@@ -30,34 +30,34 @@ I want to be able to input an arabic number and receive a roman numeral in retur
 ```
 #### Instructions for use:
 
-1. clone the repository:
+- clone the repository:
 ```
 https://github.com/AnnaHollandSmith/roman-numerals
 ```
 
-2. navigate into the appropriate directory:
+- navigate into the appropriate directory:
 ```
 cd roman-numerals
 ```
 
-3. install the required gems and ensure the appropriate ruby version is being used by running the following command in the command-line:
+- install the required gems and ensure the appropriate ruby version is being used by running the following command in the command-line:
 ```
 bundle install
 ```
 
-4. open IRB (the interactive ruby shell) in the command-line:
+- open IRB (the interactive ruby shell) in the command-line:
 ```
 irb
 ```
-5. within IRB, require in the roman numerals ruby file contained in the lib folder of the project directory:
+- within IRB, require in the roman numerals ruby file contained in the lib folder of the project directory:
 ```
 require './lib/roman_numerals'
 ```
-6. use the method **RomanNumerals.convert(n)** to input a number which will generate the correct roman numeral for the number provided:
+- use the method **RomanNumerals.convert(n)** to input a number which will generate the correct roman numeral for the number provided:
 ```
 RomanNumerals.convert(199)
 ```
-7. to run tests, exit from irb and run:
+- to run tests, exit from irb and run:
 ```
 rspec
 ```
