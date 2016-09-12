@@ -1,6 +1,7 @@
 require "roman_numerals"
 
 describe RomanNumerals do
+
   context "it converts a given number into a roman numeral" do
 
     it "should convert 1 into I" do
@@ -30,5 +31,13 @@ describe RomanNumerals do
     it "should convert 1000 into M" do
       expect(RomanNumerals.convert(1000)).to eq("M")
     end
+  end
+
+  context "it uses additional notation to convert numbers to roman numerals" do
+
+    it "should convert 25 into XXV" do
+      expect(RomanNumerals.convert(25)).to eq("XXV")
+    end
+    
   end
 end

@@ -1,17 +1,20 @@
 class RomanNumerals
 
   ROMAN_NUMERALS = {
-                  1 => "I",
-                  5 => "V",
-                  10 => "X",
-                  50 => "L",
-                  100 => "C",
+                  1000 => "M",
                   500 => "D",
-                  1000 => "M"
+                  100 => "C",
+                  50 => "L",
+                  10 => "X",
+                  5 => "V",
+                  1 => "I",
                 }
 
   def self.convert(n)
-    ROMAN_NUMERALS[n]
+    roman_numeral = ""
+    ROMAN_NUMERALS.each do |key, value|
+      (n / key).times { roman_numeral << value; n -= key }
+    end
+    roman_numeral
   end
-
 end
