@@ -1,6 +1,8 @@
 # Roman Numerals Coding Kata
+[The Kata](#the-kata) | [User Story](#user-story) | [Instructions](#instructions)
 
-#### The Problem:
+
+#### <a name=the-kata>The Kata:</a>
 ```
 In whatever language you prefer, write a class that implements the following interface (example given in Java):
 
@@ -22,13 +24,13 @@ For example, see the following sample inputs and outputs:
 Caveat: Only support numbers between 1 and 3999
 ```
 
-#### User Story:
+#### <a name="user-story">User Story:</a>
 ```
 As a User
-So that I can do my work faster with fewer errors.
+So that I can do my work faster with fewer errors
 I want to be able to input an arabic number and receive a roman numeral in return
 ```
-#### Instructions for use:
+#### <a name="instructions">Instructions for use:</a>
 
 - clone the repository:
 ```
