@@ -38,6 +38,22 @@ describe RomanNumerals do
     it "should convert 25 into XXV" do
       expect(RomanNumerals.convert(25)).to eq("XXV")
     end
-    
+
+    it "should convert 102 into CII" do
+      expect(RomanNumerals.convert(102)).to eq("CII")
+    end
+
+    it "should convert 552 into DLII" do
+      expect(RomanNumerals.convert(552)).to eq("DLII")
+    end
+
+    it "should convert 2653 into MMDCLIII" do
+      expect(RomanNumerals.convert(2653)).to eq("MMDCLIII")
+    end
+
+    it "should convert 3000 into MMM" do
+      expect(RomanNumerals.convert(3000)).to eq("MMM")
+    end
+
   end
 end
