@@ -17,7 +17,7 @@ class RomanNumerals
                 }
 
   def self.convert(n)
-    if n <= 0 || n >= 3999
+    if n <= 0 || n > 3999
       raise "Value must be an integer in the range 0 - 3,999."
     end
     roman_numeral = ""

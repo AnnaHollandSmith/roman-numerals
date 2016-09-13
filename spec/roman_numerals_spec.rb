@@ -77,6 +77,9 @@ describe RomanNumerals do
       it "should convert 9 into IX" do
         expect(subject.convert(9)).to eq ("IX")
       end
+      it "should convert 3999 into MMMCMXCIX" do
+        expect(subject.convert(3999)).to eq("MMMCMXCIX")
+      end
     end
 
     context "there is no zero in roman numerals" do
