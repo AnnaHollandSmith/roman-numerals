@@ -1,5 +1,5 @@
 # Roman Numerals Coding Kata
-[The Kata](#the-kata) | [User Story](#user-story) | [Instructions](#instructions)
+[The Kata](#the-kata) | [User Story](#user-story) | [Instructions](#instructions) | [Approach](#approach)
 
 
 #### <a name=the-kata>The Kata:</a>
@@ -63,3 +63,10 @@ RomanNumerals.convert(199)
 ```
 rspec
 ```
+
+#### <a name="approach">Approach:</a>
+
+**Caveats:**
+- The converter will only support numbers between 1 and 3999.
+- Will support conversion to 'Modern Roman Numerals', which has the subtraction concept( under the modern numeric system an arabic 4 would be a roman IV rather than IIII)
+- The Kata asks for the creation of a class to handle this conversion. As such, it has been interpreted that any solution should be a single class application.

@@ -22,7 +22,7 @@ class RomanNumerals
     end
     roman_numeral = ""
     ROMAN_NUMERALS.each do |k, v|
-      (n / k).times { roman_numeral << v; n -= k }
+    (n / k).times { roman_numeral << v; n -= k}
     end
     roman_numeral
   end

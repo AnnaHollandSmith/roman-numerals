@@ -40,6 +40,10 @@ describe RomanNumerals do
         expect(subject.convert(25)).to eq("XXV")
       end
 
+      it "should  convert 44 into XLIV" do
+        expect(subject.convert(44)).to eq("XLIV")
+      end
+
       it "should convert 102 into CII" do
         expect(subject.convert(102)).to eq("CII")
       end
@@ -69,13 +73,22 @@ describe RomanNumerals do
       it "should convert 99 into XCIX" do
         expect(subject.convert(99)).to eq("XCIX")
       end
+
+      it "should convert 9 into IX" do
+        expect(subject.convert(9)).to eq ("IX")
+      end
+    end
+
+    context "there is no zero in roman numerals" do
+      it "should raise an error when given a zero" do
+        expect{ subject.convert(0) }.to raise_error("Value must be an integer in the range 0 - 3,999.")
+      end
     end
 
     context "only operates for integers between and including 1 and 3999" do
       it "should raise an error when given an integer that is not positive" do
-        expect{ subject.convert(0) }.to raise_error("Value must be an integer in the range 0 - 3,999.")
+        expect{ subject.convert(-5) }.to raise_error("Value must be an integer in the range 0 - 3,999.")
       end
-
       it "should raise an error when given an integer greater than 3999" do
         expect{ subject.convert(6000) }.to raise_error("Value must be an integer in the range 0 - 3,999.")
       end
