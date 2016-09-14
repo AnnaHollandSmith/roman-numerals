@@ -75,10 +75,25 @@ describe RomanNumerals do
       end
 
       it "should convert 9 into IX" do
-        expect(subject.convert(9)).to eq ("IX")
+        expect(subject.convert(9)).to eq("IX")
       end
       it "should convert 3999 into MMMCMXCIX" do
         expect(subject.convert(3999)).to eq("MMMCMXCIX")
+      end
+    end
+
+    context " it provides the answer to a mathematical expression in roman numerals" do
+      it "should convert 3 + 3 into VI" do
+        expect(subject.convert(3 + 3)).to eq("VI")
+      end
+      it "should convert 50 * 3 into CL" do
+        expect(subject.convert(50 * 3)).to eq("CL")
+      end
+      it "should convert (22 * 4) / 2 into XLIV " do
+        expect(subject.convert((22 * 4) / 2)).to eq("XLIV")
+      end
+      it "should convert ((398 * 2) * 4 ) / 3 into " do
+        expect(subject.convert(((398 * 2) * 4 ) / 3)).to eq("MLXI")
       end
     end
 
@@ -94,6 +109,13 @@ describe RomanNumerals do
       end
       it "should raise an error when given an integer greater than 3999" do
         expect{ subject.convert(6000) }.to raise_error("Value must be an integer in the range 0 - 3,999.")
+      end
+      it 'should not accept a string input' do
+        expect{ subject.convert('test') }.to raise_error(ArgumentError)
+        expect{ subject.convert('33') }.to raise_error(ArgumentError)
+      end
+      it "should not accept a float input" do
+        expect{ subject.convert(3.5) }.to raise_error(NoMethodError)
       end
     end
   end
