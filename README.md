@@ -1,28 +1,5 @@
 # Roman Numerals Coding Kata
-[The Kata](#the-kata) | [User Story](#user-story) | [Instructions](#instructions) | [Approach](#approach)
-
-
-#### <a name=the-kata>The Kata:</a>
-```
-In whatever language you prefer, write a class that implements the following interface (example given in Java):
-
-
-public interface RomanNumeralGenerator {
-
-    public String generate(int number);
-
-}
-
-For example, see the following sample inputs and outputs:
-
-1 = “I”
-5 = “V”
-10 = “X”
-20 = “XX”
-3999 = “MMMCMXCIX”
-
-Caveat: Only support numbers between 1 and 3999
-```
+ [User Story](#user-story) | [Instructions](#instructions) | [Approach](#approach) | [The Kata](#the-kata)
 
 #### <a name="user-story">User Story:</a>
 ```
@@ -55,7 +32,6 @@ irb
 ```
 require './lib/roman_numerals'
 ```
-**Converting to a Roman Numeral**
 - use the method **RomanNumerals.convert(n)** to input a number which will generate the correct roman numeral for the number provided:
 ```
 RomanNumerals.convert(199)
@@ -68,6 +44,35 @@ rspec
 #### <a name="approach">Approach:</a>
 
 **Caveats:**
+
 - The converter will only support numbers between 1 and 3999.
 - Will support conversion to 'Modern Roman Numerals', which has the subtraction concept( under the modern numeric system an arabic 4 would be a roman IV rather than IIII)
 - The Kata asks for the creation of a class to handle this conversion. As such, it has been interpreted that any solution should be a single class application.
+
+**Technology and Tests**
+
+My solution to the kata is written in Ruby and tested using RSpec.
+
+As the commit history for this repository will demonstrate, I utilised a test-driven (TDD) approach to solving this kata. Practicing incremental test-driven development encouraged emergent design and ensured that the API was being designed from the client's perspective (delivering an MVP that served the purposes laid out in the specification and not succumbing to superfluous and unnecessarily complex features)
+
+#### <a name=the-kata>The Kata:</a>
+```
+In whatever language you prefer, write a class that implements the following interface (example given in Java):
+
+
+public interface RomanNumeralGenerator {
+
+    public String generate(int number);
+
+}
+
+For example, see the following sample inputs and outputs:
+
+1 = “I”
+5 = “V”
+10 = “X”
+20 = “XX”
+3999 = “MMMCMXCIX”
+
+Caveat: Only support numbers between 1 and 3999
+```
