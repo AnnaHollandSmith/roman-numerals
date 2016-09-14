@@ -55,6 +55,7 @@ irb
 ```
 require './lib/roman_numerals'
 ```
+**Converting to a Roman Numeral**
 - use the method **RomanNumerals.convert(n)** to input a number which will generate the correct roman numeral for the number provided:
 ```
 RomanNumerals.convert(199)
