@@ -41,7 +41,7 @@ require './lib/roman_numerals'
 RomanNumerals.convert(199)
 ```
 
-![alt tag](https://cloud.githubusercontent.com/assets/14944060/18510684/4d840cb6-7a77-11e6-8422-0b34e21ffdef.png)
+![alt tag](https://cloud.githubusercontent.com/assets/14944060/18510684/4d840cb6-7a77-11e6-8422-0b34e21ffdef.png =100x20)
 
 **Tests:**
 
