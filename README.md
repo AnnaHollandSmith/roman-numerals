@@ -9,6 +9,8 @@ I want to be able to input an arabic number and receive a roman numeral in retur
 ```
 #### <a name="instructions">Instructions for use:</a>
 
+**Setup:**
+
 - clone the repository:
 ```
 https://github.com/AnnaHollandSmith/roman-numerals
@@ -24,6 +26,8 @@ cd roman-numerals
 bundle install
 ```
 
+**Convert:**
+
 - open IRB (the interactive ruby shell) in the command-line:
 ```
 irb
@@ -36,6 +40,11 @@ require './lib/roman_numerals'
 ```
 RomanNumerals.convert(199)
 ```
+
+![alt tag](https://cloud.githubusercontent.com/assets/14944060/18510684/4d840cb6-7a77-11e6-8422-0b34e21ffdef.png)
+
+**Tests:**
+
 - to run tests, exit from irb and run:
 ```
 rspec
