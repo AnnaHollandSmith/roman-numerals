@@ -52,18 +52,18 @@ rspec
 **Caveats:**
 
 - The converter will only support numbers between 1 and 3999.
-- Will support conversion to 'Modern Roman Numerals', which has the subtraction concept( under the modern numeric system an arabic 4 would be a roman IV rather than IIII)
+-I have assumed that the convertor requires an output that corresponds to 'Modern Roman Numerals', which have the subtraction concept and special rules for 4, 9, 90, 400 and 900 (under the modern numeric system an Arabic 4 would be a Roman IV rather than IIII). In a production environment, as it is not explicitly stated in the spec this, is a detail that I would have clarified with the client.
 - The Kata asks for the creation of a class to handle this conversion. As such, it has been interpreted that any solution should be a single class application.
 
 **Technology and Tests**
 
 My solution to the kata is written in Ruby and tested using RSpec.
 
-As the commit history for this repository will demonstrate, I utilised a test-driven (TDD) approach to solving this kata. Practicing incremental test-driven development encouraged emergent design and ensured that the API was being designed from the client's perspective (delivering an MVP that served the purposes laid out in the specification and not succumbing to superfluous and unnecessarily complex features). In this kata, the API is just a single method, so there is not much to design but adopting such an approach ensured a solution that does not make inferences about the client's, intent or deliver functionality beyond the scope of the problem.
+As the commit history for this repository will demonstrate, I utilised a test-driven (TDD) approach to solving this kata. Practicing incremental test-driven development encouraged emergent design and ensured that the API was being designed from the client's perspective (delivering an MVP that served the purposes laid out in the specification and not succumbing to superfluous and unnecessarily complex features). In this kata, the API is just a single method, so there is not much to design but adopting such an approach ensured a solution that does not make inferences about the client's, intent or deliver functionality beyond the scope of the problem
 
 **The Algorithm**
 
-The algorithm for my convert method is relatively straightforward. I have created a constant _ROMAN_ and stored the base Roman numerals and the exception numerals as a hash. To convert a given integer to a Roman numeral, my _convert_ method iterates over all the keys within the ROMAN hash and divides the number by the keys (the arabic numbers stored in the hash). If the given number is divisible by the current key within an iteration, it appends the corresponding Roman numeral for that key value pair to the _roman_numeral_ string.
+The algorithm for my convert method is relatively straightforward. I have created a constant _ROMAN_ and stored the base Roman numerals and the exception numerals as a hash. To convert a given integer to a Roman numeral, my _convert_ method iterates over all the keys within the _ROMAN_ hash and divides the number by the keys (the arabic numbers stored in the hash). If the given number is divisible by the current key within an iteration, it appends the corresponding Roman numeral for that key value pair to the _roman_numeral_ string.
 
 Using the concrete example of 52, the method dictates that _roman_numeral_ is initially set to an empty string. The _convert_ method then iterates over all of the keys in the _ROMAN_ hash until it locates a key which 52 is divisible by (This is the reason behind the decision for the hash value to be stored in descending order). When it reaches 50 in the hash, 50 goes once into 52 (with a remainder of 2), so 'L' is appended into the _roman_numeral_ string. The process is continued with the remainder, with all keys being skipped until the final key, where 2 is found to be divisible by 1. 1 goes into 2 twice, so two "I"s are appended to the _roman_numeral_. This gives us an output of "LII"
 
