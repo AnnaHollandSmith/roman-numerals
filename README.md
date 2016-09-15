@@ -68,6 +68,7 @@ The algorithm for my convert method is relatively straightforward. I have create
 Using the concrete example of 52, the method dictates that _roman_numeral_ is initially set to an empty string. The _convert_ method then iterates over all of the keys in the _ROMAN_ hash until it locates a key which 52 is divisible by (This is the reason behind the decision for the hash value to be stored in descending order). When it reaches 50 in the hash, 50 goes once into 52 (with a remainder of 2), so 'L' is appended into the _roman_numeral_ string. The process is continued with the remainder, with all keys being skipped until the final key, where 2 is found to be divisible by 1. 1 goes into 2 twice, so two "I"s are appended to the _roman_numeral_. This gives us an output of "LII"
 
 ### <a name=the-kata>The Kata:</a>
+
 ```
 In whatever language you prefer, write a class that implements the following interface (example given in Java):
 
