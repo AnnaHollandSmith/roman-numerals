@@ -1,6 +1,6 @@
 class RomanNumerals
 
-  ROMAN_NUMERALS = {
+  ROMAN = {
               1000 => "M",
               900 => "CM",
               500 => "D",
@@ -21,8 +21,8 @@ class RomanNumerals
       raise "Value must be an integer in the range 0 - 3,999."
     end
     roman_numeral = ""
-    ROMAN_NUMERALS.each do |k, v|
-    (n / k).times { roman_numeral << v; n -= k}
+    ROMAN.each do |k, v|
+    (n / k).times { roman_numeral << v; n -= k }
     end
     roman_numeral
   end
