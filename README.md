@@ -52,7 +52,7 @@ rspec
 **Caveats:**
 
 - The converter will only support numbers between 1 and 3999.
--I have assumed that the convertor requires an output that corresponds to 'Modern Roman Numerals', which have the subtraction concept and special rules for 4, 9, 90, 400 and 900 (under the modern numeric system an Arabic 4 would be a Roman IV rather than IIII). In a production environment, as it is not explicitly stated in the spec this, is a detail that I would have clarified with the client.
+- I have assumed that the convertor requires an output that corresponds to 'Modern Roman Numerals', which have the subtraction concept and special rules for 4, 9, 90, 400 and 900 (under the modern numeric system an Arabic 4 would be a Roman IV rather than IIII). In a production environment, as it is not explicitly stated in the spec this, is a detail that I would have clarified with the client.
 - The Kata asks for the creation of a class to handle this conversion. As such, it has been interpreted that any solution should be a single class application.
 
 **Technology and Tests**
