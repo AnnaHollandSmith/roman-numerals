@@ -70,7 +70,8 @@ Using the concrete example of 52, the method dictates that _roman_numeral_ is in
 ### <a name=the-kata>The Kata:</a>
 
 ```
-In whatever language you prefer, write a class that implements the following interface (example given in Java):
+In whatever language you prefer, write a class that implements the
+following interface (example given in Java):
 
 
 public interface RomanNumeralGenerator {
